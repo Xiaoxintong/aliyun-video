@@ -82,7 +82,7 @@
 
 
     <!--change track tips-->
-    <string name="alivc_player_track_change_error">Track切换失败 : %s --- %s</string>
+    <string name="alivc_player_track_change_error">Track切换失败 : %1$s --- %2$s</string>
     <string name="alivc_player_track_bitrate_change_success">码率切换为 : %s</string>
     <string name="alivc_player_track_definition_change_success">清晰度切换为 : %s</string>
     <string name="alivc_player_track_change_success">切换为 : %s</string>
