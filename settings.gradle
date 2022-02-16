@@ -1,0 +1,3 @@
+include ':app'
+include ':aliyun:AlivcMedia', ':aliyun:AliyunVideoCommon', ':aliyun:AliyunSVideoBase', ':aliyun:snap_crop', ':aliyun:snap_record'
+include ':aliyun:AliyunPlayerBase', ':aliyun:AlivcPlayerTools', ':aliyun:player_custom'

@@ -1,0 +1,126 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.aliyun.vodplayer"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:5:5-79
+11-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:6:5-76
+12-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:6:22-73
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:7:5-67
+13-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:8:5-81
+14-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:9:5-68
+15-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:9:22-65
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+16-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:10:5-75
+16-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:10:22-72
+17    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:12:5-80
+18-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:12:22-77
+19    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+19-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:13:5-86
+19-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:13:22-83
+20
+21    <application
+21-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:15:5-56:19
+22        android:allowBackup="true"
+22-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:16:9-35
+23        android:supportsRtl="true" >
+23-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:17:9-35
+24        <activity
+24-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:18:9-23:66
+25            android:name="com.aliyun.vodplayerview.activity.AliyunPlayerSkinActivity"
+25-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:19:13-86
+26            android:configChanges="orientation|keyboardHidden|screenSize"
+26-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:20:13-74
+27            android:launchMode="singleTop"
+27-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:22:13-43
+28            android:screenOrientation="portrait"
+28-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:21:13-49
+29            android:theme="@style/Theme.AppCompat.NoActionBar" />
+29-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:23:13-63
+30        <activity
+30-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:24:9-29:66
+31            android:name="com.aliyun.player.aliyunplayerbase.activity.SdkVersionActivity"
+31-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:25:13-90
+32            android:configChanges="orientation|keyboardHidden|screenSize"
+32-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:26:13-74
+33            android:launchMode="singleTop"
+33-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:27:13-43
+34            android:screenOrientation="portrait"
+34-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:28:13-49
+35            android:theme="@style/Theme.AppCompat.NoActionBar" />
+35-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:29:13-63
+36        <activity
+36-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:30:9-35:66
+37            android:name="com.aliyun.vodplayerview.activity.AliyunPlayerSettingActivity"
+37-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:31:13-89
+38            android:configChanges="orientation|keyboardHidden|screenSize"
+38-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:32:13-74
+39            android:launchMode="singleTop"
+39-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:33:13-43
+40            android:screenOrientation="portrait"
+40-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:34:13-49
+41            android:theme="@style/Theme.AppCompat.NoActionBar" />
+41-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:35:13-63
+42        <activity
+42-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:36:9-41:66
+43            android:name="com.aliyun.vodplayerview.activity.AliyunPlayerConfigActivity"
+43-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:37:13-88
+44            android:configChanges="orientation|keyboardHidden|screenSize"
+44-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:38:13-74
+45            android:launchMode="singleTop"
+45-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:39:13-43
+46            android:screenOrientation="portrait"
+46-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:40:13-49
+47            android:theme="@style/Theme.AppCompat.NoActionBar" />
+47-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:41:13-63
+48        <activity
+48-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:42:9-46:65
+49            android:name="com.aliyun.vodplayerview.activity.AliyunPlayerTypeEditActivity"
+49-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:42:19-96
+50            android:configChanges="orientation|keyboardHidden|screenSize"
+50-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:43:13-74
+51            android:launchMode="singleTop"
+51-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:44:13-43
+52            android:screenOrientation="portrait"
+52-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:45:13-49
+53            android:theme="@style/Theme.AppCompat.NoActionBar" />
+53-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:46:13-63
+54        <activity
+54-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:47:9-51:65
+55            android:name="com.aliyun.vodplayerview.activity.AliyunPlayerDownloadListActivity"
+55-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:47:19-100
+56            android:configChanges="orientation|keyboardHidden|screenSize"
+56-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:48:13-74
+57            android:launchMode="singleTop"
+57-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:49:13-43
+58            android:screenOrientation="portrait"
+58-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:50:13-49
+59            android:theme="@style/Theme.AppCompat.NoActionBar" />
+59-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:51:13-63
+60
+61        <service
+61-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:53:9-55:40
+62            android:name="com.aliyun.player.alivcplayerexpand.view.dlna.service.ClingUpnpService"
+62-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:54:13-98
+63            android:exported="false" />
+63-->/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/AndroidManifest.xml:55:13-37
+64    </application>
+65
+66</manifest>

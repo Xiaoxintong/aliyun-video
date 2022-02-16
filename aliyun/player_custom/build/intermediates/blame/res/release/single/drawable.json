@@ -1,0 +1,366 @@
+[
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/round_bkg_us.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/round_bkg_us.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/round_bkg_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/round_bkg_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_dialog_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_dialog_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_player_red_rectangle_bg_trailer_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_player_red_rectangle_bg_trailer_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/navigation_empty_icon.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_dialog_bg_translucent.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/drawable/alivc_dialog_bg_translucent.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/aliyun_player_type_normal_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/aliyun_player_type_normal_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_solution_tab_item_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_solution_tab_item_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/tooltip_frame_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_download_new_task.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_download_new_task.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_commen_dialog_progress_background_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/drawable/alivc_commen_dialog_progress_background_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/aliyun_player_download_list_bg_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/aliyun_player_download_list_bg_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_info_seekbar_bg_blue.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_info_seekbar_bg_blue.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/edit_round_rect_unfocused.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/edit_round_rect_unfocused.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/aliyun_player_type_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/aliyun_player_type_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_input_danmu_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_input_danmu_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_rr_bg_orange.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_rr_bg_orange.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_volume_img.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_volume_img.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_rr_bg_green.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_rr_bg_green.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/design_fab_background.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/loading_rotate.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/loading_rotate.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/edit_round_bkg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/edit_round_bkg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/progress_horizontal.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/progress_horizontal.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_dialog_gesture_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_dialog_gesture_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/round_rect_unpressed.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/round_rect_unpressed.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_player_download_progressbar_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_player_download_progressbar_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_info_seekbar_bg_red.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_info_seekbar_bg_red.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/mtrl_snackbar_background.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/mtrl_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_rr_bg_blue.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_rr_bg_blue.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_player_capacity_progressbar_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_player_capacity_progressbar_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_common_dialog_circle_progress_background.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/drawable/alivc_common_dialog_circle_progress_background.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/aliyun_player_type_checked_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/aliyun_player_type_checked_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/btn_round_bkg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/btn_round_bkg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_checkbox_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_checkbox_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_info_seekbar_bg_orange.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_info_seekbar_bg_orange.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_input_et_danmu_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_input_et_danmu_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_list_item_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_list_item_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/round_rect_pressed.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/round_rect_pressed.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/design_snackbar_background.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_common_rv_divider_gray_vertical.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/drawable/alivc_common_rv_divider_gray_vertical.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/edit_round_rect_focused.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/edit_round_rect_focused.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_screen_cost_pointer_red_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_screen_cost_pointer_red_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_info_seekbar_bg_green.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_info_seekbar_bg_green.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/tooltip_frame_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/6964a135c14668aeb0b8e55e2919afd5/material-1.0.0/res/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/rate_dialog_bkg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/rate_dialog_bkg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/aliyun_player_refresh_bg_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/aliyun_player_refresh_bg_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_rr_bg_red.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_rr_bg_red.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_rr_bg_white.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_rr_bg_white.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_dialog_error_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunPlayerBase/build/intermediates/packaged_res/release/drawable/alivc_dialog_error_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/alivc_fillet_bg_shape.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/alivc_fillet_bg_shape.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/round_bkg_s.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcPlayerTools/build/intermediates/packaged_res/release/drawable/round_bkg_s.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/shape_edit_bg.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/src/main/res/drawable/shape_edit_bg.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/player_custom/build/intermediates/res/merged/release/drawable/abc_vector_test.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/drawable/abc_vector_test.xml"
+    }
+]

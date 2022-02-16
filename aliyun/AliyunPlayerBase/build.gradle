@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='cn.xxt.aliyun'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+
+}
+
+dependencies {
+
+    api project(':aliyun:AliyunVideoCommon')
+
+    api deps.supportV4
+    api deps.appcompatV7
+    api deps.recyclerviewV7
+    api deps.okhttp
+    api deps.gson
+    api deps.aliyunOSS
+    api deps.design
+    api deps.cardviewV7
+
+    api deps.aliyunexternalPlayerFull
+//    implementation deps.aliyunAlivcFFmpeg
+    api 'com.aliyun.sdk.android:AlivcArtc:5.4.0'
+    api 'com.aliyun.rts.android:RtsSDK:1.6.0'
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/0f861b7c406f22e0228ac18e27295c06/core-1.0.0/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

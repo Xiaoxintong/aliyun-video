@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/aliyun_svideo_tab_text_color_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/packaged_res/release/color/aliyun_svideo_tab_text_color_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/selector_video_duration.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/build/intermediates/packaged_res/release/color/selector_video_duration.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/alivc_beauty_level_text_selector.xml",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunSVideoBase/build/intermediates/packaged_res/release/color/alivc_beauty_level_text_selector.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_tint_default.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/snap_crop/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/luke/.gradle/caches/transforms-2/files-2.1/a8559907fa7ba4b8a41ea7f34c75f3ab/appcompat-1.0.0/res/color/abc_secondary_text_material_light.xml"
+    }
+]

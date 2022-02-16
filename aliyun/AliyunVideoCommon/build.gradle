@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='cn.xxt.aliyun'
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+}
+
+dependencies {
+//    implementation project(':commons')
+    implementation (deps.glide){
+        exclude group: "com.android.support"
+    }
+//    implementation externalAndroidSupportV4
+//    implementation externalAndroidAppCompatV7
+//    implementation externalAndroidRecyclerView
+//    implementation externalOKHTTP
+//    implementation externalGSON
+
+    implementation deps.supportV4
+    implementation deps.appcompatV7
+    implementation deps.recyclerviewV7
+    implementation deps.rxbindingRecyclerview
+    implementation deps.okhttp
+    implementation deps.gson
+    api deps.rxpermissions
+    api deps.rxjava
+    api deps.rxandroid
+}

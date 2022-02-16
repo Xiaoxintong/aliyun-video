@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/build/intermediates/res/merged/release/mipmap-xhdpi-v4/alivc_common_icon_circle_progress.png",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/alivc_common_icon_circle_progress.png"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/build/intermediates/res/merged/release/mipmap-xhdpi-v4/icon_delete_tips.png",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AliyunVideoCommon/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/icon_delete_tips.png"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/build/intermediates/res/merged/release/mipmap-xhdpi-v4/aliyun_svideo_icon_up.png",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_up.png"
+    },
+    {
+        "merged": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/build/intermediates/res/merged/release/mipmap-xhdpi-v4/aliyun_svideo_icon_down.png",
+        "source": "/Users/luke/git/github/aliyun-video/aliyun/AlivcMedia/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_down.png"
+    }
+]
