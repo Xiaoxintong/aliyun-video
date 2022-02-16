@@ -81,7 +81,7 @@
     <string name="alivc_player_normal_config">默认配置</string>
 
     <!--change track tips-->
-    <string name="alivc_player_track_change_error">Track change Error : %s --- %s</string>
+    <string name="alivc_player_track_change_error">Track change Error : %1$s --- %2$s</string>
     <string name="alivc_player_track_bitrate_change_success">video bitrate change To : %s</string>
     <string name="alivc_player_track_definition_change_success">video definition change To : %s</string>
     <string name="alivc_player_track_change_success">change to : %s</string>
