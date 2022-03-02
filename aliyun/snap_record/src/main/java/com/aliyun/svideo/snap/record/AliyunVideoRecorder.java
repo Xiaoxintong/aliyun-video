@@ -221,7 +221,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
 
     private void sendRxBus(String outPath) {
         try {
-            Class rxbusClass = Class.forName("cn.xxt.commons.util.RxBusWithTag");
+            Class rxbusClass = Class.forName("cn.xxt.base.commons.util.RxBusWithTag");
             Method method = rxbusClass.getMethod("getInstance");
             Object instance = method.invoke(null);
             Method sendMethod = rxbusClass.getMethod("send", new Class[]{Object.class, Object.class});
