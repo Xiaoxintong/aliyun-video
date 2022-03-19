@@ -74,5 +74,6 @@ dependencies {
         implementation project(':aliyun:AliyunPlayerBase')
         implementation project(':aliyun:AlivcPlayerTools')
         implementation project(':aliyun:player_custom')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
 }

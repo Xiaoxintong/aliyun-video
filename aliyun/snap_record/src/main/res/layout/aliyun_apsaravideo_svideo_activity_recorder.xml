@@ -89,7 +89,7 @@
             android:layout_width="@dimen/alivc_common_size_icon_60"
             android:layout_height="@dimen/alivc_common_size_icon_60"
             android:layout_gravity="center"
-            android:background="?attr/qusnap_record_icon"/>
+            android:src="@mipmap/aliyun_svideo_icon_record_normal"/>
         <ImageView
             android:id="@+id/aliyun_delete_btn"
             android:layout_width="@dimen/alivc_common_size_icon_32"

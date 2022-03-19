@@ -639,6 +639,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
         if (isRecording) {
             mRecorder.cancelRecording();
             isRecording = false;
+            updateRecordBtnUi();
         }
         mRecorder.stopPreview();
 
@@ -1099,7 +1100,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                         if (!isRecordFinish) {
                             handleRecordStart();
                             mRecorder.startRecording();
-//                            mRecordBtn.setPressed(true);
+                            mRecordBtn.setPressed(true);
                             isRecording = true;
                             Log.d(TAG, "startRecording");
                             updateRecordBtnUi();
@@ -1110,9 +1111,9 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
 
     private void updateRecordBtnUi() {
         if (isRecording) {
-            mRecordBtn.setImageResource(R.mipmap.aliyun_svideo_icon_record_normal);
-        } else {
             mRecordBtn.setImageResource(R.mipmap.aliyun_svideo_icon_record_pause);
+        } else {
+            mRecordBtn.setImageResource(R.mipmap.aliyun_svideo_icon_record_normal);
         }
     }
 
@@ -1120,7 +1121,6 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
     AlertDialog openAppDetDialog = null;
 
     private void stopRecording() {
-        isRecording = false;
         if (!isRecordFinish) {
             mRecorder.stopRecording();
         }
@@ -1193,11 +1193,12 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                         if (!checkIfStartRecording()) {
                             return false;
                         }
-//                        mRecordBtn.setHovered(true);
+                        mRecordBtn.setHovered(true);
                         startRecording();
                     } else {
-                          stopRecording();
+                        //  stopRecording();
                         isRecording = false;
+                        updateRecordBtnUi();
                     }
                 }
             } else if (mRecordMode == AliyunSnapVideoParam.RECORD_MODE_PRESS) {
@@ -1205,7 +1206,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                     if (!checkIfStartRecording()) {
                         return false;
                     }
-//                    mRecordBtn.setSelected(true);
+                    mRecordBtn.setSelected(true);
                     startRecording();
                 } else if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
                     stopRecording();
@@ -1223,32 +1224,34 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
 
                         startRecording();
 
-//                        mRecordBtn.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                if (mRecordBtn.isPressed()) {
-//                                    mRecordBtn.setSelected(true);
-//                                    mRecordBtn.setHovered(true);
-//                                }
-//                            }
-//                        }, 200);
+                        mRecordBtn.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (mRecordBtn.isPressed()) {
+                                    mRecordBtn.setSelected(true);
+                                    mRecordBtn.setHovered(true);
+                                }
+                            }
+                        }, 200);
                     } else {
                         stopRecording();
                         isRecording = false;
+                        updateRecordBtnUi();
                     }
                 } else if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
                     long timeOffset = System.currentTimeMillis() - mDownTime;
-//                    mRecordBtn.setPressed(false);
+                    mRecordBtn.setPressed(false);
                     if (timeOffset > 1000) {
                         stopRecording();
                         isRecording = false;
+                        updateRecordBtnUi();
                     } else {
                         if (!isRecordError) {
-//                            mRecordBtn.setSelected(false);
-//                            mRecordBtn.setHovered(true);
+                            mRecordBtn.setSelected(false);
+                            mRecordBtn.setHovered(true);
                         } else {
                             isRecording = false;
-                            stopRecording();
+                            updateRecordBtnUi();
                         }
                     }
                 }
@@ -1300,9 +1303,9 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-//                mRecordBtn.setActivated(false);
-//                mRecordBtn.setHovered(false);
-//                mRecordBtn.setSelected(false);
+                mRecordBtn.setActivated(false);
+                mRecordBtn.setHovered(false);
+                mRecordBtn.setSelected(false);
                 updateRecordBtnUi();
                 if (validClip) {
                     mRecordTimelineView.setDuration((int) clipDuration);
@@ -1319,6 +1322,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                 mDeleteBtn.setEnabled(true);
                 showComplete();
                 isRecording = false;
+                updateRecordBtnUi();
             }
         });
 
