@@ -1151,10 +1151,9 @@ public class AliyunVodPlayerView extends RelativeLayout implements ITheme {
                         if (orientationChangeListener != null) {
                             orientationChangeListener.orientationChange(false, AliyunScreenMode.Small);
                         }
-                    } else {
-                        //设置为小屏状态
-                        changeScreenMode(AliyunScreenMode.Small, false);
-                    }
+                    } 
+                    //设置为小屏状态
+                    changeScreenMode(AliyunScreenMode.Small, false);
                 } else if (mCurrentScreenMode == AliyunScreenMode.Small) {
                     //小屏状态下，就结束活动
                     Context context = getContext();
