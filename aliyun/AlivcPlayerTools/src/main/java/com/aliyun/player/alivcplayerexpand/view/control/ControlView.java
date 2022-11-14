@@ -30,6 +30,7 @@ import com.aliyun.player.alivcplayerexpand.view.interfaces.ViewAction;
 import com.aliyun.player.alivcplayerexpand.view.quality.QualityItem;
 import com.aliyun.player.alivcplayerexpand.widget.AliyunVodPlayerView;
 import com.aliyun.player.aliyunplayerbase.util.AliyunScreenMode;
+import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
 import com.aliyun.player.nativeclass.MediaInfo;
 import com.aliyun.player.nativeclass.TrackInfo;
 import com.aliyun.svideo.common.utils.FastClickUtil;
@@ -68,6 +69,8 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
     private ImageView mTitlebarBackBtn;
     //标题
     private TextView mTitlebarText;
+    //下载按钮
+    private ImageView mTitleDownload;
     //视频播放状态
     private PlayState mPlayState = PlayState.NotPlaying;
     //播放按钮
@@ -144,6 +147,8 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
     private OnSeekListener mOnSeekListener;
     //标题返回按钮监听
     private OnBackClickListener mOnBackClickListener;
+    //标题下载按钮监听
+    private OnDownloadClickListener mOnOnDownloadClickListener;
     //播放按钮点击监听
     private OnPlayStateClickListener mOnPlayStateClickListener;
     //清晰度按钮点击监听
@@ -248,6 +253,7 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
 
         mTitlebarBackBtn = (ImageView) findViewById(R.id.alivc_title_back);
         mTitlebarText = (TextView) findViewById(R.id.alivc_title_title);
+        mTitleDownload = (ImageView) findViewById(R.id.alivc_title_download);
         mTitleMore = findViewById(R.id.alivc_title_more);
         mScreenModeBtn = (ImageView) findViewById(R.id.alivc_screen_mode);
         mScreenLockBtn = (ImageView) findViewById(R.id.alivc_screen_lock);
@@ -284,6 +290,15 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
             public void onClick(View v) {
                 if (mOnBackClickListener != null) {
                     mOnBackClickListener.onClick();
+                }
+            }
+        });
+        //下载按钮监听
+        mTitleDownload.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (null != mOnOnDownloadClickListener) {
+                    mOnOnDownloadClickListener.onClickDownload();
                 }
             }
         });
@@ -1472,6 +1487,10 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
          * 返回按钮点击事件
          */
         void onClick();
+    }
+
+    public void setOnDownloadClickListener(OnDownloadClickListener l) {
+        mOnOnDownloadClickListener = l;
     }
 
     public interface OnSeekListener {

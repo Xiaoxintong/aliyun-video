@@ -64,6 +64,7 @@ import com.aliyun.player.alivcplayerexpand.view.thumbnail.ThumbnailView;
 import com.aliyun.player.alivcplayerexpand.view.trailers.TrailersView;
 import com.aliyun.player.aliyunplayerbase.util.AliyunScreenMode;
 import com.aliyun.player.aliyunplayerbase.util.NetWatchdog;
+import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
 import com.aliyun.player.aliyunplayerbase.util.OrientationWatchDog;
 import com.aliyun.player.aliyunplayerbase.util.ScreenUtils;
 import com.aliyun.player.aliyunplayerbase.view.tipsview.OnTipsViewBackClickListener;
@@ -3398,6 +3399,15 @@ public class AliyunVodPlayerView extends RelativeLayout implements ITheme {
     public void setOnShowMoreClickListener(
             ControlView.OnShowMoreClickListener listener) {
         this.mOutOnShowMoreClickListener = listener;
+    }
+
+    public void setOnOutDownloadClickListener(OnDownloadClickListener listener) {
+        if (null != mControlView) {
+            mControlView.setOnDownloadClickListener(listener);
+        }
+        if (null != mTipsView) {
+            mTipsView.setOnDownloadClickListener(listener);
+        }
     }
 
     /**

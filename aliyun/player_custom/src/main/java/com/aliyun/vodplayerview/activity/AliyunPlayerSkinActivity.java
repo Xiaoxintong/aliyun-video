@@ -71,6 +71,7 @@ import com.aliyun.player.aliyunplayerbase.net.GetAuthInformation;
 import com.aliyun.player.aliyunplayerbase.net.ServiceCommon;
 import com.aliyun.player.aliyunplayerbase.util.AliyunScreenMode;
 import com.aliyun.player.aliyunplayerbase.util.NetWatchdog;
+import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
 import com.aliyun.player.aliyunplayerbase.view.tipsview.ErrorInfo;
 import com.aliyun.player.aliyunplayerbase.view.tipsview.OnTipsViewBackClickListener;
 import com.aliyun.player.aliyunplayerbase.view.tipsview.TipsView;
@@ -230,12 +231,18 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
      */
     private boolean mIsFromDownloadActivity;
 
+    private static OnDownloadClickListener onDownloadClickListener;
+
     public static void startAliyunPlayerSkinActivityWithLocalVideo(Context context, String path) {
         Intent intent = new Intent(context, AliyunPlayerSkinActivity.class);
         intent.putExtra(GlobalPlayerConfig.Intent_Key.LOCAL_VIDEO_PATH, path);
         intent.putExtra(GlobalPlayerConfig.Intent_Key.NEED_ONLY_FULL_SCREEN,true);
         GlobalPlayerConfig.mCurrentPlayType = GlobalPlayerConfig.PLAYTYPE.URL;
         context.startActivity(intent);
+    }
+
+    public static void setOnDownloadClickListener(OnDownloadClickListener listener) {
+        onDownloadClickListener = listener;
     }
 
     @Override
@@ -369,6 +376,9 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
                 startActivityForResult(intent, AliyunPlayerDownloadListActivity.DOWNLOAD_ACTIVITY_FOR_REQUEST_CODE);
             }
         });
+
+        //设置导航栏点击事件监听接口
+        mAliyunVodPlayerView.setOnOutDownloadClickListener(onDownloadClickListener);
     }
 
     /**

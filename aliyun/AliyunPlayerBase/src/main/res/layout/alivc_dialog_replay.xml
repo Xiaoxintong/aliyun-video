@@ -11,6 +11,17 @@
         android:padding="@dimen/alivc_common_padding_20"
         android:src="@drawable/ic_back"/>
 
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="@dimen/alivc_common_margin_25"
+        android:layout_height="@dimen/alivc_common_margin_25"
+        android:src="@drawable/xxt_icon_video_dwonload"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/iv_back"
+        android:layout_alignBottom="@+id/iv_back"
+        android:layout_marginRight="@dimen/alivc_common_padding_16"
+        android:visibility="visible" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

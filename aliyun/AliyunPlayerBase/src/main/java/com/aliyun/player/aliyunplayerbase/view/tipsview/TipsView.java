@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
 import com.aliyun.player.bean.ErrorCode;
 
 /*
@@ -38,6 +39,8 @@ public class TipsView extends RelativeLayout {
     private OnTipClickListener mOnTipClickListener = null;
     //返回点击事件
     private OnTipsViewBackClickListener mOnTipsViewBackClickListener = null;
+    //下载按钮点击事件
+    private OnDownloadClickListener onDownloadClickListener;
     //当前的主题
 //    private Theme mCurrentTheme;
 
@@ -216,6 +219,7 @@ public class TipsView extends RelativeLayout {
             mReplayView = new ReplayView(getContext());
             mReplayView.setOnBackClickListener(onTipsViewBackClickListener);
             mReplayView.setOnReplayClickListener(onReplayClickListener);
+            mReplayView.setOnDownloadClickListener(onDownloadClickListener);
             addSubView(mReplayView);
         }
 
@@ -439,5 +443,9 @@ public class TipsView extends RelativeLayout {
 
     public void setOnTipsViewBackClickListener(OnTipsViewBackClickListener listener){
         this.onTipsViewBackClickListener = listener;
+    }
+
+    public void setOnDownloadClickListener(OnDownloadClickListener listener) {
+        this.onDownloadClickListener = listener;
     }
 }

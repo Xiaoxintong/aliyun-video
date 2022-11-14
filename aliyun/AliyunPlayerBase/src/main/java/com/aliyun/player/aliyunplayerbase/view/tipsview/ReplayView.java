@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.aliyun.player.aliyunplayerbase.R;
+import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
 
 
 /*
@@ -24,7 +25,9 @@ public class ReplayView extends RelativeLayout {
     //重播事件监听
     private OnReplayClickListener mOnReplayClickListener = null;
     private OnTipsViewBackClickListener mOnTipsViewBackClickListener = null;
+    private OnDownloadClickListener onDownloadClickListener;
     private ImageView mBackImageView;
+    private ImageView mDownloadImageView;
 
     public ReplayView(Context context) {
         super(context);
@@ -50,6 +53,7 @@ public class ReplayView extends RelativeLayout {
         //设置监听
         mReplayBtn = (TextView) view.findViewById(R.id.replay);
         mBackImageView = view.findViewById(R.id.iv_back);
+        mDownloadImageView = view.findViewById(R.id.iv_download);
         mReplayBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +72,14 @@ public class ReplayView extends RelativeLayout {
             }
         });
 
+        mDownloadImageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (null != onDownloadClickListener) {
+                    onDownloadClickListener.onClickDownload();
+                }
+            }
+        });
     }
 
 //    @Override
@@ -112,5 +124,9 @@ public class ReplayView extends RelativeLayout {
      */
     public void setOnBackClickListener(OnTipsViewBackClickListener listener){
         this.mOnTipsViewBackClickListener = listener;
+    }
+
+    public void setOnDownloadClickListener(OnDownloadClickListener listener) {
+        this.onDownloadClickListener = listener;
     }
 }
