@@ -32,12 +32,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
-
 import com.aliyun.common.global.Version;
 import com.aliyun.common.utils.CommonUtil;
+import com.aliyun.common.utils.StringUtils;
 import com.aliyun.svideo.base.Constants;
 import com.aliyun.svideo.base.widget.RecordTimelineView;
 import com.aliyun.svideo.common.utils.FastClickUtil;
@@ -75,6 +72,9 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -105,6 +105,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
 
     public static final String INTENT_USE_RXBUS_BOOLEAN = "INTENT_USE_RXBUS_BOOLEAN";
     public static final String RXBUS_ALI_VIDEO_RECORD = "RXBUS_ALI_VIDEO_RECORD";
+    public static final String RXBUS_ALI_VIDEO_RECORD_BACK = "RXBUS_ALI_VIDEO_RECORD_BACK";
 
     private int mResolutionMode;
     private int mMinDuration;
@@ -219,14 +220,16 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
         return intent;
     }
 
-    private void sendRxBus(String outPath) {
+    private void sendRxBus(String rxBusTag, String outPath) {
         try {
             Class rxbusClass = Class.forName("cn.xxt.base.commons.util.RxBusWithTag");
             Method method = rxbusClass.getMethod("getInstance");
             Object instance = method.invoke(null);
             Method sendMethod = rxbusClass.getMethod("send", new Class[]{Object.class, Object.class});
 
-            sendMethod.invoke(instance, RXBUS_ALI_VIDEO_RECORD, outPath);
+            if (!StringUtils.isEmpty(rxBusTag)) {
+                sendMethod.invoke(instance, rxBusTag, outPath);
+            }
         } catch (Exception e) {
 
         }
@@ -529,7 +532,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                 }
                 mClipManager.deleteAllPart();
                 if (useRxBus) {
-                    sendRxBus(outputPath);
+                    sendRxBus(RXBUS_ALI_VIDEO_RECORD, outputPath);
                 } else {
                     Intent intent = new Intent();
                     intent.putExtra(OUTPUT_PATH, outputPath);
@@ -819,6 +822,11 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
     @Override
     public void onBackPressed() {
         if (!isRecording) {
+            if (useRxBus) {
+                // 页面返回到调用方，如果是直接取消的。也通知回去。
+                // 场景：h5触发的选择视频，没选择，直接返回了。h5页面ValueCallback 需要回调null，形成闭环。要不然下次input无法再触发
+                sendRxBus(RXBUS_ALI_VIDEO_RECORD_BACK, "");
+            }
             setResult(Activity.RESULT_CANCELED);
             finish();
         }
@@ -963,7 +971,7 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
         if (requestCode == REQUEST_CROP && resultCode == RESULT_OK) {
             if (useRxBus) {
                 String outputPath = data.getStringExtra("crop_path");
-                sendRxBus(outputPath);
+                sendRxBus(RXBUS_ALI_VIDEO_RECORD, outputPath);
             } else {
                 data.putExtra(RESULT_TYPE, RESULT_TYPE_CROP);
                 setResult(Activity.RESULT_OK, data);

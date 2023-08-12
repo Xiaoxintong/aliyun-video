@@ -5,21 +5,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.aliyun.common.utils.ToastUtil;
 import com.aliyun.player.alivcplayerexpand.constants.GlobalPlayerConfig;
-import com.aliyun.player.alivcplayerexpand.view.control.ControlView;
 import com.aliyun.player.aliyunplayerbase.util.OnDownloadClickListener;
-import com.aliyun.svideo.snap.record.AliyunVideoRecorder;
-import com.aliyun.svideosdk.common.struct.common.AliyunSnapVideoParam;
 import com.aliyun.vodplayerview.activity.AliyunPlayerSkinActivity;
-
-import java.util.Map;
-
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 
 public class TestMainActivity extends Activity {
