@@ -43,5 +43,6 @@
     <string name="aliyun_sdcard_not_ready">sdcard not ready</string>
     <string name="alivc_crop_setting">crop setting</string>
     <string name="alivc_crop_video_tip_error">Video error</string>
+    <string name="alivc_crop_limit_tip">Only videos within %1$s seconds can be uploaded. You can drag the clip box in the lower part of the progress bar to adjust the video duration</string>
 
 </resources>
