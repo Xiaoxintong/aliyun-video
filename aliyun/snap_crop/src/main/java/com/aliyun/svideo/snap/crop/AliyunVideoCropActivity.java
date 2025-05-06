@@ -904,17 +904,17 @@ public class AliyunVideoCropActivity extends Activity implements TextureView.Sur
                 mCropProgress.setVisibility(View.GONE);
                 mCropProgressBg.setVisibility(View.GONE);
                 seekBar.setSliceBlocked(false);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    //适配android Q
-                    ThreadUtils.runOnSubThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            UriUtils.saveVideoToMediaStore(AliyunVideoCropActivity.this.getApplicationContext(), outputPath);
-                        }
-                    });
-                } else {
-                    scanFile();
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                    //适配android Q
+//                    ThreadUtils.runOnSubThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            UriUtils.saveVideoToMediaStore(AliyunVideoCropActivity.this.getApplicationContext(), outputPath);
+//                        }
+//                    });
+//                } else {
+//                    scanFile();
+//                }
                 Intent intent = getIntent();
                 intent.putExtra(CropKey.RESULT_KEY_CROP_PATH, outputPath);
                 intent.putExtra(CropKey.RESULT_KEY_DURATION, mEndTime - mStartTime);

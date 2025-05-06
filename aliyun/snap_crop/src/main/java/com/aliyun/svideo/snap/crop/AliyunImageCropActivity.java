@@ -658,17 +658,17 @@ public class AliyunImageCropActivity extends Activity implements HorizontalListV
             public void run() {
                 mCropProgress.setVisibility(View.GONE);
                 mCropProgressBg.setVisibility(View.GONE);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    //适配android Q
-                    ThreadUtils.runOnSubThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            UriUtils.saveVideoToMediaStore(AliyunImageCropActivity.this.getApplicationContext(), outputPath);
-                        }
-                    });
-                } else {
-                    scanFile();
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                    //适配android Q
+//                    ThreadUtils.runOnSubThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            UriUtils.saveVideoToMediaStore(AliyunImageCropActivity.this.getApplicationContext(), outputPath);
+//                        }
+//                    });
+//                } else {
+//                    scanFile();
+//                }
                 Intent intent = getIntent();
                 intent.putExtra(RESULT_KEY_CROP_PATH, outputPath);
                 String tagClassName = AliyunSvideoActionConfig.getInstance().getAction().getTagClassName(ActionInfo.SVideoAction.CROP_TARGET_CLASSNAME);
