@@ -114,7 +114,7 @@
             android:layout_marginLeft="@dimen/alivc_common_margin_60"
             android:layout_gravity="center_vertical|left"
             android:visibility="?attr/qusnap_gallery_icon_visibility"
-            android:src="?attr/qusnap_gallery_icon"/>
+            android:src="@drawable/qusnap_gallery_icon"/>
     </FrameLayout>
     <TextView
         android:id="@+id/aliyun_filter_txt"
