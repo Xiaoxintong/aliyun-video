@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 
 android {
@@ -24,23 +23,9 @@ android {
         }
     }
 
-    publishing {
-        singleVariant('release')
-    }
-
-
 }
 
 dependencies {
 
     api project(':aliyun:AlivcPlayerTools')
 }
-
-// 发布配置
-ext {
-    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
-    PUBLISH_ARTIFACT_ID = 'player_custom'
-    PUBLISH_VERSION = '1.2.0'
-}
-
-apply from: "${rootProject.projectDir}/publish-module.gradle"

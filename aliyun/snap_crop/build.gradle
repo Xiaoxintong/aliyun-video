@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 
 android {
@@ -13,9 +12,6 @@ android {
     lintOptions {
         warning 'InvalidPackage'
     }
-    publishing {
-        singleVariant('release')
-    }
 }
 
 dependencies {
@@ -25,12 +21,3 @@ dependencies {
     implementation deps.appcompatV7
     implementation deps.recyclerviewV7
 }
-
-// 发布配置
-ext {
-    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
-    PUBLISH_ARTIFACT_ID = 'snap_crop'
-    PUBLISH_VERSION = '1.2.0'
-}
-
-apply from: "${rootProject.projectDir}/publish-module.gradle"

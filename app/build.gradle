@@ -82,4 +82,5 @@ dependencies {
     implementation project(':aliyun:player_custom')
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    api 'com.github.Xiaoxintong.aliyun-video:snap_record:1.2.0'
 }

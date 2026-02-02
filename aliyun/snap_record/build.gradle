@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 
 android {
@@ -24,12 +23,3 @@ dependencies {
     implementation project(':aliyun:AliyunVideoCommon')
     implementation deps.appcompatV7
 }
-
-// 发布配置
-ext {
-    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
-    PUBLISH_ARTIFACT_ID = 'snap_record'
-    PUBLISH_VERSION = '1.2.0'
-}
-
-apply from: "${rootProject.projectDir}/publish-module.gradle"

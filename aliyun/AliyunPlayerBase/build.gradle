@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -18,14 +17,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-    }
-
-    repositories {
-        flatDir { dirs 'libs' }
-    }
-
-    publishing {
-        singleVariant('release')
     }
 
 }
@@ -49,12 +40,3 @@ dependencies {
     //noinspection Aligned16KB
     api 'com.aliyun.rts.android:RtsSDK:1.6.0'
 }
-
-// 发布配置
-ext {
-    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
-    PUBLISH_ARTIFACT_ID = 'AliyunPlayerBase'
-    PUBLISH_VERSION = '1.2.0'
-}
-
-apply from: "${rootProject.projectDir}/publish-module.gradle"
