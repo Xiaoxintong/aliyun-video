@@ -2065,7 +2065,7 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
         }
 
         @Override
-        public void onSeiData(int i, byte[] bytes, byte[] bytes1) {
+        public void onSeiData(int i, byte[] bytes) {
             AliyunPlayerSkinActivity aliyunPlayerSkinActivity = weakReference.get();
             if (aliyunPlayerSkinActivity != null) {
                 aliyunPlayerSkinActivity.onSeiData(i, bytes);

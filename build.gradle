@@ -220,8 +220,8 @@ aliyunAlivcFFmpeg                 : 'com.aliyun.video.android:AlivcFFmpeg:2.0.0'
 //阿里云 播放器
 //如果集成播放器的同时，也集成短视频SDK，那么播放器的sdk依赖AliyunPlayer-x.x.x-part包，
 // 同时使用共通的ffmpeg版本，即需要额外依赖com.aliyun.video.android:AlivcFFmpeg:x.x.x这个包
-aliyunexternalPlayerPart          : 'com.aliyun.sdk.android:AliyunPlayer:7.11.0-part',
-aliyunexternalPlayerFull          : 'com.aliyun.sdk.android:AliyunPlayer:7.11.0-full',
+aliyunexternalPlayerPart          : 'com.aliyun.sdk.android:AliyunPlayer:5.4.0-part',
+aliyunexternalPlayerFull          : 'com.aliyun.sdk.android:AliyunPlayer:5.4.0-full',
 
 aliyunOSS                         : 'com.aliyun.dpa:oss-android-sdk:+',
 

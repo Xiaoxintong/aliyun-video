@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Surface;
 import android.widget.FrameLayout;
 
@@ -61,19 +60,19 @@ public class AliyunRenderView extends FrameLayout {
         init(context);
     }
 
-    private void init(Context context) {
+    private void init(Context context){
         this.mContext = context;
 
         initPlayer();
     }
 
-    private void initPlayer() {
+    private void initPlayer(){
         mAliPlayer = AliPlayerFactory.createAliPlayer(mContext.getApplicationContext());
 
         initPlayerListener();
     }
 
-    private void initPlayerListener() {
+    private void initPlayerListener(){
         mAliPlayer.setOnInfoListener(new OnAVPInfoListener(this));
         mAliPlayer.setOnErrorListener(new OnAVPErrorListener(this));
         mAliPlayer.setOnSeiDataListener(new OnAVPSeiDataListener(this));
@@ -91,7 +90,7 @@ public class AliyunRenderView extends FrameLayout {
         mAliPlayer.setOnVideoSizeChangedListener(new OnAVPVideoSizeChangedListener(this));
     }
 
-    public enum SurfaceType {
+    public enum SurfaceType{
         /**
          * TextureView
          */
@@ -105,19 +104,18 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取真正的播放器实例对象
      */
-    public AliPlayer getAliPlayer() {
+    public AliPlayer getAliPlayer(){
         return mAliPlayer;
     }
 
     /**
      * 该方法需要在创建播放器完成后,prepare前调用
-     *
-     * @param surfaceType Surface的类型
+     * @param surfaceType  Surface的类型
      */
-    public void setSurfaceType(SurfaceType surfaceType) {
-        if (surfaceType == SurfaceType.TEXTURE_VIEW && (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)) {
+    public void setSurfaceType(SurfaceType surfaceType){
+        if(surfaceType == SurfaceType.TEXTURE_VIEW && (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)){
             mIRenderView = new TextureRenderView(mContext);
-        } else {
+        }else{
             mIRenderView = new SurfaceRenderView(mContext);
         }
         initListener();
@@ -127,8 +125,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置播放源
      */
-    public void setDataSource(VidSts vidSts) {
-        if (mAliPlayer != null) {
+    public void setDataSource(VidSts vidSts){
+        if(mAliPlayer != null){
             mAliPlayer.setDataSource(vidSts);
         }
     }
@@ -136,8 +134,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置播放源
      */
-    public void setDataSource(VidAuth vidAuth) {
-        if (mAliPlayer != null) {
+    public void setDataSource(VidAuth vidAuth){
+        if(mAliPlayer != null){
             mAliPlayer.setDataSource(vidAuth);
         }
     }
@@ -145,8 +143,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置播放源
      */
-    public void setDataSource(LiveSts liveSts) {
-        if (mAliPlayer != null) {
+    public void setDataSource(LiveSts liveSts){
+        if(mAliPlayer != null){
             mAliPlayer.setDataSource(liveSts);
         }
     }
@@ -154,8 +152,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置播放源
      */
-    public void setDataSource(VidMps vidMps) {
-        if (mAliPlayer != null) {
+    public void setDataSource(VidMps vidMps){
+        if(mAliPlayer != null){
             mAliPlayer.setDataSource(vidMps);
         }
     }
@@ -163,8 +161,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置播放源
      */
-    public void setDataSource(UrlSource urlSource) {
-        if (mAliPlayer != null) {
+    public void setDataSource(UrlSource urlSource){
+        if(mAliPlayer != null){
             mAliPlayer.setDataSource(urlSource);
         }
     }
@@ -172,8 +170,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 刷新sts信息
      */
-    public void updateStsInfo(StsInfo stsInfo) {
-        if (mAliPlayer != null) {
+    public void updateStsInfo(StsInfo stsInfo){
+        if(mAliPlayer != null){
             mAliPlayer.updateStsInfo(stsInfo);
         }
     }
@@ -181,8 +179,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 刷新Auth信息
      */
-    public void updateAuthInfo(VidAuth vidAuth) {
-        if (mAliPlayer != null) {
+    public void updateAuthInfo(VidAuth vidAuth){
+        if(mAliPlayer != null){
             mAliPlayer.updateVidAuth(vidAuth);
         }
     }
@@ -190,8 +188,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置是否静音
      */
-    public void setMute(boolean isMute) {
-        if (mAliPlayer != null) {
+    public void setMute(boolean isMute){
+        if(mAliPlayer != null){
             mAliPlayer.setMute(isMute);
         }
     }
@@ -200,7 +198,7 @@ public class AliyunRenderView extends FrameLayout {
      * 设置音量
      */
     public void setVolume(float v) {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             mAliPlayer.setVolume(v);
         }
     }
@@ -208,8 +206,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取音量
      */
-    public float getVolume() {
-        if (mAliPlayer != null) {
+    public float getVolume(){
+        if(mAliPlayer != null){
             return mAliPlayer.getVolume();
         }
         return 0;
@@ -218,8 +216,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 是否开启自动播放
      */
-    public void setAutoPlay(boolean isAutoPlay) {
-        if (mAliPlayer != null) {
+    public void setAutoPlay(boolean isAutoPlay){
+        if(mAliPlayer != null){
             mAliPlayer.setAutoPlay(isAutoPlay);
         }
     }
@@ -228,7 +226,7 @@ public class AliyunRenderView extends FrameLayout {
      * 设置播放速率
      */
     public void setSpeed(float speed) {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             mAliPlayer.setSpeed(speed);
         }
     }
@@ -236,14 +234,14 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 是否循环播放
      */
-    public void setLoop(boolean loop) {
-        if (mAliPlayer != null) {
+    public void setLoop(boolean loop){
+        if(mAliPlayer != null){
             mAliPlayer.setLoop(loop);
         }
     }
 
-    public boolean isLoop() {
-        if (mAliPlayer != null) {
+    public boolean isLoop(){
+        if(mAliPlayer != null){
             return mAliPlayer.isLoop();
         }
         return false;
@@ -252,40 +250,38 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 截屏
      */
-    public void snapshot() {
-        if (mAliPlayer != null) {
+    public void snapshot(){
+        if(mAliPlayer != null){
             mAliPlayer.snapshot();
         }
     }
 
     /**
      * 选择 track
-     *
      * @param index 索引
      */
     public void selectTrack(int index) {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             mAliPlayer.selectTrack(index);
         }
     }
 
     /**
      * 选择 track
-     *
-     * @param index 索引
-     * @param focus 是否强制选择track
+     * @param index  索引
+     * @param focus  是否强制选择track
      */
-    public void selectTrack(int index, boolean focus) {
-        if (mAliPlayer != null) {
-            mAliPlayer.selectTrack(index, focus);
+    public void selectTrack(int index,boolean focus){
+        if(mAliPlayer != null){
+            mAliPlayer.selectTrack(index,focus);
         }
     }
 
     /**
      * 停止播放
      */
-    public void stop() {
-        if (mAliPlayer != null) {
+    public void stop(){
+        if(mAliPlayer != null){
             mAliPlayer.stop();
         }
     }
@@ -294,7 +290,7 @@ public class AliyunRenderView extends FrameLayout {
      * prepare
      */
     public void prepare() {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             mAliPlayer.prepare();
         }
     }
@@ -302,20 +298,20 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 暂停播放,直播流不建议使用
      */
-    public void pause() {
-        if (mAliPlayer != null) {
+    public void pause(){
+        if(mAliPlayer != null){
             mAliPlayer.pause();
         }
     }
 
-    public void start() {
-        if (mAliPlayer != null) {
+    public void start(){
+        if(mAliPlayer != null){
             mAliPlayer.start();
         }
     }
 
-    public void reload() {
-        if (mAliPlayer != null) {
+    public void reload(){
+        if(mAliPlayer != null){
             mAliPlayer.reload();
         }
     }
@@ -323,8 +319,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取视频时长
      */
-    public long getDuration() {
-        if (mAliPlayer != null) {
+    public long getDuration(){
+        if(mAliPlayer != null){
             return mAliPlayer.getDuration();
         }
         return 0;
@@ -334,7 +330,7 @@ public class AliyunRenderView extends FrameLayout {
      * 获取当前 track
      */
     public TrackInfo currentTrack(TrackInfo.Type typeVideo) {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             return mAliPlayer.currentTrack(typeVideo);
         }
         return null;
@@ -345,7 +341,7 @@ public class AliyunRenderView extends FrameLayout {
      */
     @Deprecated
     public TrackInfo currentTrack(int ordinal) {
-        if (mAliPlayer != null) {
+        if(mAliPlayer != null){
             return mAliPlayer.currentTrack(ordinal);
         }
         return null;
@@ -353,25 +349,24 @@ public class AliyunRenderView extends FrameLayout {
 
     /**
      * seek
-     *
-     * @param position 目标位置
-     * @param seekMode 精准/非精准seek
+     * @param position  目标位置
+     * @param seekMode  精准/非精准seek
      */
-    public void seekTo(long position, IPlayer.SeekMode seekMode) {
-        if (mAliPlayer != null) {
-            mAliPlayer.seekTo(position, seekMode);
+    public void seekTo(long position, IPlayer.SeekMode seekMode){
+        if(mAliPlayer != null){
+            mAliPlayer.seekTo(position,seekMode);
         }
     }
 
-    private void initListener() {
+    private void initListener(){
         mIRenderView.addRenderCallback(new MyRenderViewCallback(this));
     }
 
     /**
      * 缓存配置
      */
-    public void setCacheConfig(CacheConfig cacheConfig) {
-        if (mAliPlayer != null) {
+    public void setCacheConfig(CacheConfig cacheConfig){
+        if(mAliPlayer != null){
             mAliPlayer.setCacheConfig(cacheConfig);
         }
     }
@@ -379,8 +374,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置PlayerConfig
      */
-    public void setPlayerConfig(PlayerConfig playerConfig) {
-        if (mAliPlayer != null) {
+    public void setPlayerConfig(PlayerConfig playerConfig){
+        if(mAliPlayer != null){
             mAliPlayer.setConfig(playerConfig);
         }
     }
@@ -388,8 +383,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取PlayerConfig
      */
-    public PlayerConfig getPlayerConfig() {
-        if (mAliPlayer != null) {
+    public PlayerConfig getPlayerConfig(){
+        if(mAliPlayer != null){
             return mAliPlayer.getConfig();
         }
         return null;
@@ -398,8 +393,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置缩放模式
      */
-    public void setScaleModel(IPlayer.ScaleMode scaleMode) {
-        if (mAliPlayer != null) {
+    public void setScaleModel(IPlayer.ScaleMode scaleMode){
+        if(mAliPlayer != null){
             mAliPlayer.setScaleMode(scaleMode);
         }
     }
@@ -407,8 +402,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取当前缩放模式
      */
-    public IPlayer.ScaleMode getScaleModel() {
-        if (mAliPlayer != null) {
+    public IPlayer.ScaleMode getScaleModel(){
+        if(mAliPlayer != null){
             return mAliPlayer.getScaleMode();
         }
         return IPlayer.ScaleMode.SCALE_ASPECT_FIT;
@@ -417,8 +412,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置旋转模式
      */
-    public void setRotateModel(IPlayer.RotateMode rotateModel) {
-        if (mAliPlayer != null) {
+    public void setRotateModel(IPlayer.RotateMode rotateModel){
+        if(mAliPlayer != null){
             mAliPlayer.setRotateMode(rotateModel);
         }
     }
@@ -426,8 +421,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取当前旋转模式
      */
-    public IPlayer.RotateMode getRotateModel() {
-        if (mAliPlayer != null) {
+    public IPlayer.RotateMode getRotateModel(){
+        if(mAliPlayer != null){
             return mAliPlayer.getRotateMode();
         }
         return IPlayer.RotateMode.ROTATE_0;
@@ -436,8 +431,8 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 设置镜像模式
      */
-    public void setMirrorMode(IPlayer.MirrorMode mirrorMode) {
-        if (mAliPlayer != null) {
+    public void setMirrorMode(IPlayer.MirrorMode mirrorMode){
+        if(mAliPlayer != null){
             mAliPlayer.setMirrorMode(mirrorMode);
         }
     }
@@ -445,15 +440,15 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 获取当前镜像模式
      */
-    public IPlayer.MirrorMode getMirrorMode() {
-        if (mAliPlayer != null) {
+    public IPlayer.MirrorMode getMirrorMode(){
+        if(mAliPlayer != null){
             return mAliPlayer.getMirrorMode();
         }
         return IPlayer.MirrorMode.MIRROR_MODE_NONE;
     }
 
-    public MediaInfo getMediaInfo() {
-        if (mAliPlayer != null) {
+    public MediaInfo getMediaInfo(){
+        if(mAliPlayer != null){
             return mAliPlayer.getMediaInfo();
         }
         return null;
@@ -461,11 +456,10 @@ public class AliyunRenderView extends FrameLayout {
 
     /**
      * 软硬解开关
-     *
-     * @param enableHardwareDecoder true:硬解,false:软解
+     * @param enableHardwareDecoder     true:硬解,false:软解
      */
-    public void enableHardwareDecoder(boolean enableHardwareDecoder) {
-        if (mAliPlayer != null) {
+    public void enableHardwareDecoder(boolean enableHardwareDecoder){
+        if(mAliPlayer != null){
             mCurrentEnableHardwareDecoder = enableHardwareDecoder;
             mAliPlayer.enableHardwareDecoder(enableHardwareDecoder);
         }
@@ -473,15 +467,14 @@ public class AliyunRenderView extends FrameLayout {
 
     /**
      * 获取当前解码状态
-     *
      * @return true:硬解,false:软解
      */
-    public boolean isHardwareDecoder() {
+    public boolean isHardwareDecoder(){
         return mCurrentEnableHardwareDecoder;
     }
 
-    public void release() {
-        if (mAliPlayer != null) {
+    public void release(){
+        if(mAliPlayer != null){
             stop();
             mAliPlayer.setSurface(null);
             mAliPlayer.release();
@@ -490,18 +483,18 @@ public class AliyunRenderView extends FrameLayout {
         mSurface = null;
     }
 
-    private static class MyRenderViewCallback implements IRenderView.IRenderCallback {
+    private static class MyRenderViewCallback implements IRenderView.IRenderCallback{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private MyRenderViewCallback(AliyunRenderView aliyunRenderView) {
+        private MyRenderViewCallback(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onSurfaceCreate(Surface surface) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null && aliyunRenderView.mAliPlayer != null) {
+            if(aliyunRenderView != null && aliyunRenderView.mAliPlayer != null){
                 aliyunRenderView.mSurface = surface;
                 aliyunRenderView.mAliPlayer.setSurface(surface);
             }
@@ -510,7 +503,7 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public void onSurfaceChanged(int width, int height) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null && aliyunRenderView.mAliPlayer != null) {
+            if(aliyunRenderView != null && aliyunRenderView.mAliPlayer != null){
                 aliyunRenderView.mAliPlayer.surfaceChanged();
             }
         }
@@ -518,7 +511,7 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public void onSurfaceDestroyed() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null && aliyunRenderView.mAliPlayer != null) {
+            if(aliyunRenderView != null && aliyunRenderView.mAliPlayer != null){
                 aliyunRenderView.mAliPlayer.setSurface(null);
             }
         }
@@ -527,11 +520,11 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnPrepared
      */
-    private static class OnAVPPreparedListener implements IPlayer.OnPreparedListener {
+    private static class OnAVPPreparedListener implements IPlayer.OnPreparedListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPPreparedListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPPreparedListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
@@ -539,7 +532,7 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public void onPrepared() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onPrepared();
             }
         }
@@ -549,36 +542,35 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * 纯音频、纯视频流监听
      */
-    public interface OnVideoStreamTrackTypeListener {
+    public interface OnVideoStreamTrackTypeListener{
         //纯视频
         void onVideoOnlyType();
-
         //纯音频
         void onAudioOnlyType();
     }
 
     private OnVideoStreamTrackTypeListener mOnVideoStreamTrackTypeListener;
 
-    public void setOnVideoStreamTrackType(OnVideoStreamTrackTypeListener listener) {
+    public void setOnVideoStreamTrackType(OnVideoStreamTrackTypeListener listener){
         this.mOnVideoStreamTrackTypeListener = listener;
     }
 
     private IPlayer.OnPreparedListener mOnPreparedListener;
 
-    public void setOnPreparedListener(IPlayer.OnPreparedListener listener) {
+    public void setOnPreparedListener(IPlayer.OnPreparedListener listener){
         this.mOnPreparedListener = listener;
     }
 
-    private void onPrepared() {
-        if (mOnPreparedListener != null) {
+    private void onPrepared(){
+        if(mOnPreparedListener != null){
             mOnPreparedListener.onPrepared();
         }
-        if (mOnVideoStreamTrackTypeListener != null) {
+        if(mOnVideoStreamTrackTypeListener != null){
             TrackInfo trackVideo = mAliPlayer.currentTrack(TrackInfo.Type.TYPE_VIDEO);
             TrackInfo trackAudio = mAliPlayer.currentTrack(TrackInfo.Type.TYPE_AUDIO);
-            if (trackVideo == null && trackAudio != null) {
+            if(trackVideo == null && trackAudio != null){
                 mOnVideoStreamTrackTypeListener.onAudioOnlyType();
-            } else if (trackVideo != null && trackAudio == null) {
+            }else if(trackVideo != null && trackAudio == null){
                 mOnVideoStreamTrackTypeListener.onVideoOnlyType();
             }
         }
@@ -586,53 +578,54 @@ public class AliyunRenderView extends FrameLayout {
     }
 
 
+
     /**
      * OnVideoRenderedListener
      */
-    private static class OnAVPVideoRenderedListener implements IPlayer.OnVideoRenderedListener {
+    private static class OnAVPVideoRenderedListener implements IPlayer.OnVideoRenderedListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPVideoRenderedListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPVideoRenderedListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onVideoRendered(long timeMs, long pts) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onVideoRendered(timeMs, pts);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onVideoRendered(timeMs,pts);
             }
         }
     }
 
     private IPlayer.OnVideoRenderedListener mOnVideoRenderedListener;
 
-    public void setOnVideoRenderedListener(IPlayer.OnVideoRenderedListener listener) {
+    public void setOnVideoRenderedListener(IPlayer.OnVideoRenderedListener listener){
         this.mOnVideoRenderedListener = listener;
     }
 
-    private void onVideoRendered(long timeMs, long pts) {
-        if (mOnVideoRenderedListener != null) {
-            mOnVideoRenderedListener.onVideoRendered(timeMs, pts);
+    private void onVideoRendered(long timeMs, long pts){
+        if(mOnVideoRenderedListener != null){
+            mOnVideoRenderedListener.onVideoRendered(timeMs,pts);
         }
     }
 
     /**
      * OnRenderingStartListener
      */
-    private static class OnAVPRenderingStartListener implements IPlayer.OnRenderingStartListener {
+    private static class OnAVPRenderingStartListener implements IPlayer.OnRenderingStartListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPRenderingStartListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPRenderingStartListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onRenderingStart() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onRenderingStart();
             }
         }
@@ -640,12 +633,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnRenderingStartListener mOnRenderingStartListener;
 
-    public void setOnRenderingStartListener(IPlayer.OnRenderingStartListener listener) {
+    public void setOnRenderingStartListener(IPlayer.OnRenderingStartListener listener){
         this.mOnRenderingStartListener = listener;
     }
 
-    private void onRenderingStart() {
-        if (mOnRenderingStartListener != null) {
+    private void onRenderingStart(){
+        if(mOnRenderingStartListener != null){
             mOnRenderingStartListener.onRenderingStart();
         }
     }
@@ -653,18 +646,18 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnStateChangedListner
      */
-    private static class OnAVPStateChangedListener implements IPlayer.OnStateChangedListener {
+    private static class OnAVPStateChangedListener implements IPlayer.OnStateChangedListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        public OnAVPStateChangedListener(AliyunRenderView aliyunRenderView) {
+        public OnAVPStateChangedListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onStateChanged(int i) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onStateChangedListener(i);
             }
         }
@@ -672,12 +665,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnStateChangedListener mOnStateChangedListener;
 
-    public void setOnStateChangedListener(IPlayer.OnStateChangedListener listener) {
+    public void setOnStateChangedListener(IPlayer.OnStateChangedListener listener){
         this.mOnStateChangedListener = listener;
     }
 
-    private void onStateChangedListener(int newState) {
-        if (mOnStateChangedListener != null) {
+    private void onStateChangedListener(int newState){
+        if(mOnStateChangedListener != null){
             mOnStateChangedListener.onStateChanged(newState);
         }
     }
@@ -685,50 +678,50 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnVideoSizeChangedListener
      */
-    private static class OnAVPVideoSizeChangedListener implements IPlayer.OnVideoSizeChangedListener {
+    private static class OnAVPVideoSizeChangedListener implements IPlayer.OnVideoSizeChangedListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        public OnAVPVideoSizeChangedListener(AliyunRenderView aliyunRenderView) {
+        public OnAVPVideoSizeChangedListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onVideoSizeChanged(int width, int height) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onVideoSizeChanged(width, height);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onVideoSizeChanged(width,height);
             }
         }
     }
 
     private IPlayer.OnVideoSizeChangedListener mOnVideoSizeChangedListener;
 
-    public void setOnVideoSizeChangedListener(IPlayer.OnVideoSizeChangedListener listener) {
+    public void setOnVideoSizeChangedListener(IPlayer.OnVideoSizeChangedListener listener){
         this.mOnVideoSizeChangedListener = listener;
     }
 
-    private void onVideoSizeChanged(int width, int height) {
-        if (mOnVideoSizeChangedListener != null) {
-            mOnVideoSizeChangedListener.onVideoSizeChanged(width, height);
+    private void onVideoSizeChanged(int width,int height){
+        if(mOnVideoSizeChangedListener != null){
+            mOnVideoSizeChangedListener.onVideoSizeChanged(width,height);
         }
     }
 
     /**
      * OnInfoListener
      */
-    private static class OnAVPInfoListener implements IPlayer.OnInfoListener {
+    private static class OnAVPInfoListener implements IPlayer.OnInfoListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPInfoListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPInfoListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onInfo(InfoBean infoBean) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onInfo(infoBean);
             }
         }
@@ -736,12 +729,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnInfoListener mOnInfoListener;
 
-    public void setOnInfoListener(IPlayer.OnInfoListener listener) {
+    public void setOnInfoListener(IPlayer.OnInfoListener listener){
         this.mOnInfoListener = listener;
     }
 
-    private void onInfo(InfoBean infoBean) {
-        if (mOnInfoListener != null) {
+    private void onInfo(InfoBean infoBean){
+        if(mOnInfoListener != null){
             mOnInfoListener.onInfo(infoBean);
         }
     }
@@ -749,18 +742,18 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnLoadingStatusListener
      */
-    private static class OnAVPLoadingStatusListener implements IPlayer.OnLoadingStatusListener {
+    private static class OnAVPLoadingStatusListener implements IPlayer.OnLoadingStatusListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPLoadingStatusListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPLoadingStatusListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onLoadingBegin() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onLoadingBegin();
             }
         }
@@ -768,15 +761,15 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public void onLoadingProgress(int percent, float netSpeed) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onLoadingProgress(percent, netSpeed);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onLoadingProgress(percent,netSpeed);
             }
         }
 
         @Override
         public void onLoadingEnd() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onLoadingEnd();
             }
         }
@@ -784,24 +777,24 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnLoadingStatusListener mOnLoadingStatusListener;
 
-    public void setOnLoadingStatusListener(IPlayer.OnLoadingStatusListener listener) {
+    public void setOnLoadingStatusListener(IPlayer.OnLoadingStatusListener listener){
         this.mOnLoadingStatusListener = listener;
     }
 
-    private void onLoadingBegin() {
-        if (mOnLoadingStatusListener != null) {
+    private void onLoadingBegin(){
+        if(mOnLoadingStatusListener != null){
             mOnLoadingStatusListener.onLoadingBegin();
         }
     }
 
-    private void onLoadingProgress(int percent, float netSpeed) {
-        if (mOnLoadingStatusListener != null) {
-            mOnLoadingStatusListener.onLoadingProgress(percent, netSpeed);
+    private void onLoadingProgress(int percent, float netSpeed){
+        if(mOnLoadingStatusListener != null){
+            mOnLoadingStatusListener.onLoadingProgress(percent,netSpeed);
         }
     }
 
-    private void onLoadingEnd() {
-        if (mOnLoadingStatusListener != null) {
+    private void onLoadingEnd(){
+        if(mOnLoadingStatusListener != null){
             mOnLoadingStatusListener.onLoadingEnd();
         }
     }
@@ -810,50 +803,50 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnSnapShotListener
      */
-    private static class OnAVPSnapShotListener implements IPlayer.OnSnapShotListener {
+    private static class OnAVPSnapShotListener implements IPlayer.OnSnapShotListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPSnapShotListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPSnapShotListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onSnapShot(Bitmap bitmap, int with, int height) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onSnapShot(bitmap, with, height);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onSnapShot(bitmap,with,height);
             }
         }
     }
 
     private IPlayer.OnSnapShotListener mOnSnapShotListener;
 
-    public void setOnSnapShotListener(IPlayer.OnSnapShotListener listener) {
+    public void setOnSnapShotListener(IPlayer.OnSnapShotListener listener){
         this.mOnSnapShotListener = listener;
     }
 
-    private void onSnapShot(Bitmap bitmap, int with, int height) {
-        if (mOnSnapShotListener != null) {
-            mOnSnapShotListener.onSnapShot(bitmap, with, height);
+    private void onSnapShot(Bitmap bitmap, int with, int height){
+        if(mOnSnapShotListener != null){
+            mOnSnapShotListener.onSnapShot(bitmap,with,height);
         }
     }
 
     /**
      * OnCompletionListener
      */
-    private static class OnAVPCompletionListener implements IPlayer.OnCompletionListener {
+    private static class OnAVPCompletionListener implements IPlayer.OnCompletionListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPCompletionListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPCompletionListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onCompletion() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onCompletion();
             }
         }
@@ -861,12 +854,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnCompletionListener mOnCompletionListener;
 
-    public void setOnCompletionListener(IPlayer.OnCompletionListener listener) {
+    public void setOnCompletionListener(IPlayer.OnCompletionListener listener){
         this.mOnCompletionListener = listener;
     }
 
-    private void onCompletion() {
-        if (mOnCompletionListener != null) {
+    private void onCompletion(){
+        if(mOnCompletionListener != null){
             mOnCompletionListener.onCompletion();
         }
     }
@@ -874,18 +867,18 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnSeekCompleteListener
      */
-    private static class OnAVPSeekCompleteListener implements IPlayer.OnSeekCompleteListener {
+    private static class OnAVPSeekCompleteListener implements IPlayer.OnSeekCompleteListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPSeekCompleteListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPSeekCompleteListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onSeekComplete() {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onSeekComplete();
             }
         }
@@ -893,12 +886,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnSeekCompleteListener mOnSeekCompleteListener;
 
-    public void setOnSeekCompleteListener(IPlayer.OnSeekCompleteListener listener) {
+    public void setOnSeekCompleteListener(IPlayer.OnSeekCompleteListener listener){
         this.mOnSeekCompleteListener = listener;
     }
 
-    private void onSeekComplete() {
-        if (mOnSeekCompleteListener != null) {
+    private void onSeekComplete(){
+        if(mOnSeekCompleteListener != null){
             mOnSeekCompleteListener.onSeekComplete();
         }
     }
@@ -906,18 +899,18 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * OnTrackChangedListener
      */
-    private static class OnAVPTrackChangedListener implements IPlayer.OnTrackChangedListener {
+    private static class OnAVPTrackChangedListener implements IPlayer.OnTrackChangedListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPTrackChangedListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPTrackChangedListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onChangedSuccess(TrackInfo trackInfo) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onChangedSuccess(trackInfo);
             }
         }
@@ -925,45 +918,45 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public void onChangedFail(TrackInfo trackInfo, ErrorInfo errorInfo) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onChangedFail(trackInfo, errorInfo);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onChangedFail(trackInfo,errorInfo);
             }
         }
     }
 
     private IPlayer.OnTrackChangedListener mOnTrackChangedListener;
 
-    public void setOnTrackChangedListener(IPlayer.OnTrackChangedListener listener) {
+    public void setOnTrackChangedListener(IPlayer.OnTrackChangedListener listener){
         this.mOnTrackChangedListener = listener;
     }
 
-    private void onChangedSuccess(TrackInfo trackInfo) {
-        if (mOnTrackChangedListener != null) {
+    private void onChangedSuccess(TrackInfo trackInfo){
+        if(mOnTrackChangedListener != null){
             mOnTrackChangedListener.onChangedSuccess(trackInfo);
         }
     }
 
-    private void onChangedFail(TrackInfo trackInfo, ErrorInfo errorInfo) {
-        if (mOnTrackChangedListener != null) {
-            mOnTrackChangedListener.onChangedFail(trackInfo, errorInfo);
+    private void onChangedFail(TrackInfo trackInfo, ErrorInfo errorInfo){
+        if(mOnTrackChangedListener != null){
+            mOnTrackChangedListener.onChangedFail(trackInfo,errorInfo);
         }
     }
 
     /**
      * OnErrorListener
      */
-    private static class OnAVPErrorListener implements IPlayer.OnErrorListener {
+    private static class OnAVPErrorListener implements IPlayer.OnErrorListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        private OnAVPErrorListener(AliyunRenderView aliyunRenderView) {
+        private OnAVPErrorListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onError(ErrorInfo errorInfo) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 aliyunRenderView.onError(errorInfo);
             }
         }
@@ -971,12 +964,12 @@ public class AliyunRenderView extends FrameLayout {
 
     private IPlayer.OnErrorListener mOnErrorListener;
 
-    public void setOnErrorListener(IPlayer.OnErrorListener listener) {
+    public void setOnErrorListener(IPlayer.OnErrorListener listener){
         this.mOnErrorListener = listener;
     }
 
-    private void onError(ErrorInfo errorInfo) {
-        if (mOnErrorListener != null) {
+    private void onError(ErrorInfo errorInfo){
+        if(mOnErrorListener != null){
             mOnErrorListener.onError(errorInfo);
         }
     }
@@ -984,124 +977,107 @@ public class AliyunRenderView extends FrameLayout {
     /**
      * onSubtitleDisplayListener
      */
-    private static class OnAVPSubtitleDisplayListener implements IPlayer.OnSubtitleDisplayListener {
+    private static class OnAVPSubtitleDisplayListener implements IPlayer.OnSubtitleDisplayListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        public OnAVPSubtitleDisplayListener(AliyunRenderView aliyunRenderView) {
+        public OnAVPSubtitleDisplayListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public void onSubtitleExtAdded(int trackIndex, String url) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onSubtitleExtAdded(trackIndex, url);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onSubtitleExtAdded(trackIndex,url);
             }
         }
 
         @Override
         public void onSubtitleShow(int trackIndex, long id, String data) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onSubtitleShow(trackIndex, id, data);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onSubtitleShow(trackIndex,id,data);
             }
         }
 
         @Override
         public void onSubtitleHide(int trackIndex, long id) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onSubtitleHide(trackIndex, id);
-            }
-        }
-
-        @Override
-        public void onSubtitleHeader(int i, String s) {
-            AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.oSubtitleHeader(i, s);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onSubtitleHide(trackIndex,id);
             }
         }
     }
-
-    private void oSubtitleHeader(int index, String data) {
-        if (mOnSubtitleDisplayListener != null) {
-            mOnSubtitleDisplayListener.onSubtitleHeader(index, data);
-        }
-    }
-
 
     private void onSubtitleHide(int trackIndex, long id) {
-        if (mOnSubtitleDisplayListener != null) {
-            mOnSubtitleDisplayListener.onSubtitleHide(trackIndex, id);
+        if(mOnSubtitleDisplayListener != null){
+            mOnSubtitleDisplayListener.onSubtitleHide(trackIndex,id);
         }
     }
 
     private void onSubtitleShow(int trackIndex, long id, String data) {
-        if (mOnSubtitleDisplayListener != null) {
-            mOnSubtitleDisplayListener.onSubtitleShow(trackIndex, id, data);
+        if(mOnSubtitleDisplayListener != null){
+            mOnSubtitleDisplayListener.onSubtitleShow(trackIndex,id,data);
         }
     }
 
     private void onSubtitleExtAdded(int trackIndex, String url) {
-        if (mOnSubtitleDisplayListener != null) {
-            mOnSubtitleDisplayListener.onSubtitleExtAdded(trackIndex, url);
+        if(mOnSubtitleDisplayListener != null){
+            mOnSubtitleDisplayListener.onSubtitleExtAdded(trackIndex,url);
         }
     }
 
     private IPlayer.OnSubtitleDisplayListener mOnSubtitleDisplayListener;
 
-    public void setOnSubtitleDisplayListener(IPlayer.OnSubtitleDisplayListener listener) {
+    public void setOnSubtitleDisplayListener(IPlayer.OnSubtitleDisplayListener listener){
         this.mOnSubtitleDisplayListener = listener;
     }
 
     /**
      * onSeiDataListener
      */
-    private static class OnAVPSeiDataListener implements IPlayer.OnSeiDataListener {
+    private static class OnAVPSeiDataListener implements IPlayer.OnSeiDataListener{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        public OnAVPSeiDataListener(AliyunRenderView aliyunRenderView) {
+        public OnAVPSeiDataListener(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
-        public void onSeiData(int i, byte[] bytes, byte[] bytes1) {
+        public void onSeiData(int type, byte[] bytes) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
-                aliyunRenderView.onSeiData(i, bytes, bytes1);
+            if(aliyunRenderView != null){
+                aliyunRenderView.onSeiData(type,bytes);
             }
         }
     }
 
-    private void onSeiData(int type, byte[] bytes, byte[] bytes1) {
-        Log.e("", "onSeiData: type = " + type + " data = " + new String(bytes));
-        if (mOnSeiDataListener != null) {
-            mOnSeiDataListener.onSeiData(type, bytes, bytes1);
+    private void onSeiData(int type, byte[] bytes) {
+        if(mOnSeiDataListener != null){
+            mOnSeiDataListener.onSeiData(type,bytes);
         }
     }
 
-
     private IPlayer.OnSeiDataListener mOnSeiDataListener;
 
-    public void setOnSeiDataListener(IPlayer.OnSeiDataListener listener) {
+    public void setOnSeiDataListener(IPlayer.OnSeiDataListener listener){
         this.mOnSeiDataListener = listener;
     }
 
-    private static class OnAVPVerifyStsCallback implements AliPlayer.OnVerifyTimeExpireCallback {
+    private static class OnAVPVerifyStsCallback implements AliPlayer.OnVerifyTimeExpireCallback{
 
         private WeakReference<AliyunRenderView> weakReference;
 
-        public OnAVPVerifyStsCallback(AliyunRenderView aliyunRenderView) {
+        public OnAVPVerifyStsCallback(AliyunRenderView aliyunRenderView){
             weakReference = new WeakReference<>(aliyunRenderView);
         }
 
         @Override
         public AliPlayer.Status onVerifySts(StsInfo stsInfo) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 return aliyunRenderView.onVerifySts(stsInfo);
             }
             return AliPlayer.Status.Valid;
@@ -1110,7 +1086,7 @@ public class AliyunRenderView extends FrameLayout {
         @Override
         public AliPlayer.Status onVerifyAuth(VidAuth vidAuth) {
             AliyunRenderView aliyunRenderView = weakReference.get();
-            if (aliyunRenderView != null) {
+            if(aliyunRenderView != null){
                 return aliyunRenderView.onVerifyAuth(vidAuth);
             }
             return AliPlayer.Status.Valid;
@@ -1119,19 +1095,19 @@ public class AliyunRenderView extends FrameLayout {
 
     private AliPlayer.OnVerifyTimeExpireCallback mOnVerifyTimeExpireCallback;
 
-    public void setOnVerifyTimeExpireCallback(AliPlayer.OnVerifyTimeExpireCallback listener) {
+    public void setOnVerifyTimeExpireCallback(AliPlayer.OnVerifyTimeExpireCallback listener){
         this.mOnVerifyTimeExpireCallback = listener;
     }
 
     private AliPlayer.Status onVerifyAuth(VidAuth vidAuth) {
-        if (mOnVerifyTimeExpireCallback != null) {
+        if(mOnVerifyTimeExpireCallback != null){
             return mOnVerifyTimeExpireCallback.onVerifyAuth(vidAuth);
         }
         return AliPlayer.Status.Valid;
     }
 
     private AliPlayer.Status onVerifySts(StsInfo stsInfo) {
-        if (mOnVerifyTimeExpireCallback != null) {
+        if(mOnVerifyTimeExpireCallback != null){
             return mOnVerifyTimeExpireCallback.onVerifySts(stsInfo);
         }
         return AliPlayer.Status.Valid;
