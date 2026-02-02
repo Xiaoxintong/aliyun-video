@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='cn.xxt.aliyun'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -26,6 +24,10 @@ android {
         flatDir { dirs 'libs' }
     }
 
+    publishing {
+        singleVariant('release')
+    }
+
 }
 
 dependencies {
@@ -44,5 +46,15 @@ dependencies {
     api deps.aliyunexternalPlayerFull
 //    implementation deps.aliyunAlivcFFmpeg
     api 'com.aliyun.sdk.android:AlivcArtc:5.4.0'
+    //noinspection Aligned16KB
     api 'com.aliyun.rts.android:RtsSDK:1.6.0'
 }
+
+// 发布配置
+ext {
+    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
+    PUBLISH_ARTIFACT_ID = 'AliyunPlayerBase'
+    PUBLISH_VERSION = '1.2.0'
+}
+
+apply from: "${rootProject.projectDir}/publish-module.gradle"

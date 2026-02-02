@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.util.Log;
 
 /**
@@ -64,7 +65,11 @@ public class ScreenStatusController {
     //开始监听
     public void startListen() {
         if (mContext != null) {
-            mContext.registerReceiver(mScreenStatusReceiver, mScreenStatusFilter);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                mContext.registerReceiver(mScreenStatusReceiver, mScreenStatusFilter, Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                mContext.registerReceiver(mScreenStatusReceiver, mScreenStatusFilter);
+            }
         }
     }
 

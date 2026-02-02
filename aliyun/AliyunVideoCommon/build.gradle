@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='cn.xxt.aliyun'
+apply plugin: 'maven-publish'
 
 
 android {
@@ -11,6 +9,10 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    publishing {
+        singleVariant('release')
     }
 
 }
@@ -36,3 +38,12 @@ dependencies {
     api deps.rxjava
     api deps.rxandroid
 }
+
+// 发布配置
+ext {
+    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
+    PUBLISH_ARTIFACT_ID = 'AliyunVideoCommon'
+    PUBLISH_VERSION = '1.2.0'
+}
+
+apply from: "${rootProject.projectDir}/publish-module.gradle"

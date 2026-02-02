@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='cn.xxt.aliyun'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -17,6 +15,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    publishing {
+        singleVariant('release')
     }
 
 }
@@ -37,3 +39,12 @@ dependencies {
     implementation deps.slf4j_api
     implementation 'com.koushikdutta.urlimageviewhelper:urlimageviewhelper:1.0.4'
 }
+
+// 发布配置
+ext {
+    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
+    PUBLISH_ARTIFACT_ID = 'AlivcPlayerTools'
+    PUBLISH_VERSION = '1.2.0'
+}
+
+apply from: "${rootProject.projectDir}/publish-module.gradle"

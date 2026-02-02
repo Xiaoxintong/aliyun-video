@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='cn.xxt.aliyun'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -14,6 +12,9 @@ android {
     lintOptions {
         warning 'InvalidPackage'
     }
+    publishing {
+        singleVariant('release')
+    }
 }
 
 dependencies {
@@ -21,3 +22,12 @@ dependencies {
     implementation deps.gson
     implementation project(':aliyun:AliyunVideoCommon')
 }
+
+// 发布配置
+ext {
+    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
+    PUBLISH_ARTIFACT_ID = 'AlivcMedia'
+    PUBLISH_VERSION = '1.2.0'
+}
+
+apply from: "${rootProject.projectDir}/publish-module.gradle"

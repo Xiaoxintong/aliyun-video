@@ -4,17 +4,36 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google'}
-        maven { url "http://www.jitpack.io" }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.2.1'
         classpath 'com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta02'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    }
+
+    // GitHub Packages 认证配置
+    // 需要在 ~/.gradle/gradle.properties 中设置：
+    // gpr.user=你的GitHub用户名
+    // gpr.key=你的GitHub Personal Access Token
+    allprojects {
+        plugins.withId("maven-publish") {
+            publishing {
+                repositories {
+                    maven {
+                        name = "GitHubPackages"
+                        url = uri("https://maven.pkg.github.com/Xiaoxintong/aliyun-video")
+                        credentials {
+                            username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+                            password = project.findProperty("gpr.key") ?: System.getenv("GPR_TOKEN")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -22,25 +41,19 @@ allprojects {
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google'}
-        maven { url 'http://4thline.org/m2' }
-        maven { url "http://www.jitpack.io" }
-        flatDir {
-            dirs '../commons/libs'
-            dirs '../pay/libs'
-            dirs '../push/libs'
-            dirs '../cooperationbusiness/libs'
-            dirs '../polyv-commonui/libs'
-            dirs '../scanner/libs'
-        }
-        maven { url 'http://mvn.mob.com/android' }
-        google()
-        //mavenCentral 源
-        mavenCentral()
-//        maven { url 'https://dl.bintray.com/polyv/android' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://jitpack.io' }
         maven {
-            url "https://storage.flutter-io.cn/download.flutter.io"
+            url "https://mvn.mob.com/android"
         }
+        maven {
+            url 'http://4thline.org/m2'
+            allowInsecureProtocol = true  // 必须添加，因为是 HTTP
+        }
+
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/releases' }
     }
 }
 
@@ -51,15 +64,14 @@ task clean(type: Delete) {
 ext {
     minSdkVersion = 21
 
-    targetSdkVersion = 27
-    compileSdkVersion = 29
-    buildToolsVersion = '29.0.2'
+    targetSdkVersion = 34
+    compileSdkVersion = 34
+    buildToolsVersion = '34.0.0'
     sourceCompatibilityVersion = JavaVersion.VERSION_1_8
     targetCompatibilityVersion = JavaVersion.VERSION_1_8
 
 
     // 依赖的jar/aar版本定义
-//    final PLAY_SERVICES_VERSION = '8.4.0'
     final SUPPORT_LIBRARY_VERSION = '1.0.0'
     final RETROFIT_VERSION = '2.9.0'
     final DAGGER_VERSION = '2.30.1'
@@ -71,7 +83,6 @@ ext {
     final RXBINDING_VERSION = '1.0.1'
     final RXLIFECYCLE_VERSION = '1.0'
     final SHARESDK_VERSION = '3.8.7'
-    final BUTTERKNIFE_VERSION = '10.2.3'
     final QMUI_VERSION = '2.0.0-alpha11'
 
 
@@ -111,9 +122,6 @@ rxbinding: "com.jakewharton.rxbinding:rxbinding:$RXBINDING_VERSION",
 rxbindingV7: "com.jakewharton.rxbinding:rxbinding-appcompat-v7:$RXBINDING_VERSION",
 rxbindingV4: "com.jakewharton.rxbinding:rxbinding-support-v4:$RXBINDING_VERSION",
 rxbindingRecyclerview: "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:$RXBINDING_VERSION",
-butterknife: "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION",
-butterknifeCompiler: "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION",
-//            timber: 'com.jakewharton.timber:timber:2.4.2',
 diskLruCache: 'com.jakewharton:disklrucache:2.0.2',
 
 rxlifecycle: "com.trello:rxlifecycle:$RXLIFECYCLE_VERSION",
@@ -143,7 +151,6 @@ datepicker:'com.bigkoo:pickerview:2.1.1',
 gestureView: 'com.takwolf.android:lock9view:0.1.3',
 commonPullToRefresh: 'com.chanven.lib:cptr:1.1.0',
 smartRefresh: 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3',
-systembartint: 'com.readystatesoftware.systembartint:systembartint:1.0.4',
 commonsValidator: 'commons-validator:commons-validator:1.7',
 marqueeview:'com.sunfusheng:MarqueeView:1.4.1',
 pdfView: 'com.joanzapata.pdfview:android-pdfview:1.1.0@aar',
@@ -233,8 +240,8 @@ aliyunAlivcFFmpeg: 'com.aliyun.video.android:AlivcFFmpeg:2.0.0',
 //阿里云 播放器
 //如果集成播放器的同时，也集成短视频SDK，那么播放器的sdk依赖AliyunPlayer-x.x.x-part包，
 // 同时使用共通的ffmpeg版本，即需要额外依赖com.aliyun.video.android:AlivcFFmpeg:x.x.x这个包
-aliyunexternalPlayerPart: 'com.aliyun.sdk.android:AliyunPlayer:5.4.0-part',
-aliyunexternalPlayerFull: 'com.aliyun.sdk.android:AliyunPlayer:5.4.0-full',
+aliyunexternalPlayerPart: 'com.aliyun.sdk.android:AliyunPlayer:7.11.0-part',
+aliyunexternalPlayerFull: 'com.aliyun.sdk.android:AliyunPlayer:7.11.0-full',
 
 aliyunOSS: 'com.aliyun.dpa:oss-android-sdk:+',
 
@@ -257,15 +264,7 @@ imageedit:'com.github.Xiaoxintong:imageedit:1.0.1',
 ijkplayer:'com.github.Xiaoxintong:jjdxm-ijkplayer:1.0.2',
 polyvapp:'com.github.Xiaoxintong.polyv:polyv-app:1.0.2',
 polyvcommonui:'com.github.Xiaoxintong.polyv:polyv-commonui:1.0.2',
-aliyunvideo:'com.github.Xiaoxintong:aliyun-video:1.0.1',
-aliyunvideosnaprecord:'com.github.Xiaoxintong.aliyun-video:snap_record:1.0.1',
-aliyunvideoplayerbase:'com.github.Xiaoxintong.aliyun-video:AliyunPlayerBase:1.0.1',
-aliyunvideoMedia:'com.github.Xiaoxintong.aliyun-video:AlivcMedia:1.0.1',
-aliyunvideoplayercustom:'com.github.Xiaoxintong.aliyun-video:player_custom:1.0.1',
-aliyunvideocommon:'com.github.Xiaoxintong.aliyun-video:AliyunVideoCommon:1.0.1',
-aliyunvideosnapcrop:'com.github.Xiaoxintong.aliyun-video:snap_crop:1.0.1',
-aliyunvideovideobase:'com.github.Xiaoxintong.aliyun-video:AliyunSVideoBase:1.0.1',
-aliyunvideoplayertools:'com.github.Xiaoxintong.aliyun-video:AlivcPlayerTools:1.0.1',
+
 actionsheet:'com.github.Xiaoxintong:ActionSheet:1.0.0',
 AndroidMathKeyboard:'com.github.Xiaoxintong:AndroidMathKeyboard:1.0.1',
 NumberProgressBar: 'com.github.Xiaoxintong:NumberProgressBar:1.0.0',

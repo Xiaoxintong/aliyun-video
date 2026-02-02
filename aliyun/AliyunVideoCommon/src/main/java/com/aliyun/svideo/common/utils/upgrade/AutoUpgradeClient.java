@@ -196,13 +196,16 @@ public class AutoUpgradeClient {
         }
         //android 23 权限适配
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            //检查权限
-            if (ContextCompat.checkSelfPermission(sContext, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-                //进入到这里代表没有权限.
-                ActivityCompat.requestPermissions((Activity) sContext, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_WRITE_EXTERNAL_STORAGE_REQUEST_CODE);
-                Log.e(TAG, "自动升级 Failure : Permission Not WRITE_EXTERNAL_STORAGE  ");
-                return;
+            // Android 10 (Q) 及以上不需要存储权限即可下载到应用私有目录
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+                //检查权限
+                if (ContextCompat.checkSelfPermission(sContext, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    //进入到这里代表没有权限.
+                    ActivityCompat.requestPermissions((Activity) sContext, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_WRITE_EXTERNAL_STORAGE_REQUEST_CODE);
+                    Log.e(TAG, "自动升级 Failure : Permission Not WRITE_EXTERNAL_STORAGE  ");
+                    return;
+                }
             }
         }
         Log.i(TAG, "自动升级,----------------- start ----------------");

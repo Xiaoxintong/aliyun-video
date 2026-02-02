@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
@@ -127,7 +128,11 @@ public class ScreenCostingView extends FrameLayout {
         filter.addAction(Intents.ACTION_PAUSED_PLAYBACK);
         filter.addAction(Intents.ACTION_STOPPED);
         filter.addAction(Intents.ACTION_TRANSITIONING);
-        getContext().registerReceiver(mTransportStateBroadcastReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getContext().registerReceiver(mTransportStateBroadcastReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            getContext().registerReceiver(mTransportStateBroadcastReceiver, filter);
+        }
     }
 
     public void play(final int position) {

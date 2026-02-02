@@ -23,26 +23,66 @@ public class PermissionUtils {
 
     private static final String TAG = PermissionUtils.class.getName();
 
+    /**
+     * Android 13 以下使用的存储权限
+     */
+    public static final String[] PERMISSION_STORAGE_LEGACY = {
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+    };
+
+    /**
+     * Android 13+ 使用的存储权限
+     */
+    public static final String[] PERMISSION_STORAGE_ANDROID13 = {
+        Manifest.permission.READ_MEDIA_IMAGES,
+        Manifest.permission.READ_MEDIA_VIDEO,
+    };
+
+    /**
+     * Android 13 以下使用的相机+存储权限
+     */
+    public static final String[] PERMISSION_CAMERA_LEGACY = {
+        Manifest.permission.CAMERA,
+        Manifest.permission.RECORD_AUDIO,
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
+    /**
+     * Android 13+ 使用的相机+存储权限
+     */
+    public static final String[] PERMISSION_CAMERA_ANDROID13 = {
+        Manifest.permission.CAMERA,
+        Manifest.permission.RECORD_AUDIO,
+        Manifest.permission.READ_MEDIA_IMAGES,
+        Manifest.permission.READ_MEDIA_VIDEO
+    };
+
+    // 兼容旧代码的常量（已废弃，请使用 getStoragePermissions() 和 getCameraAndStoragePermissions()）
     public static final String[] PERMISSION_MANIFEST = {
         Manifest.permission.CAMERA,
         Manifest.permission.BLUETOOTH,
         Manifest.permission.RECORD_AUDIO,
         Manifest.permission.READ_PHONE_STATE,
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
-        Manifest.permission.READ_EXTERNAL_STORAGE
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.READ_MEDIA_IMAGES,
+        Manifest.permission.READ_MEDIA_VIDEO,
+        Manifest.permission.POST_NOTIFICATIONS
     };
 
-    public static final String[] PERMISSION_STORAGE = {
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-    };
+    /**
+     * @deprecated 使用 {@link #getStoragePermissions()} 替代
+     */
+    @Deprecated
+    public static final String[] PERMISSION_STORAGE = PERMISSION_STORAGE_LEGACY;
 
-    public static final String[] PERMISSION_CAMERA = {
-        Manifest.permission.CAMERA,
-        Manifest.permission.RECORD_AUDIO,
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE
-    };
+    /**
+     * @deprecated 使用 {@link #getCameraAndStoragePermissions()} 替代
+     */
+    @Deprecated
+    public static final String[] PERMISSION_CAMERA = PERMISSION_CAMERA_LEGACY;
 
     /**
      * 无权限时对应的提示内容
@@ -54,7 +94,36 @@ public class PermissionUtils {
         R.string.alivc_common_no_read_phone_state_permission,
         R.string.alivc_common_no_write_external_storage_permission,
         R.string.alivc_common_no_read_external_storage_permission,
+        R.string.alivc_common_no_read_media_images_permission,
+        R.string.alivc_common_no_read_media_video_permission,
+        R.string.alivc_common_no_post_notification_permission,
     };
+
+    /**
+     * 根据 Android 版本获取存储权限数组
+     * Android 13+ 使用 READ_MEDIA_IMAGES/VIDEO
+     * Android 12 及以下使用 READ/WRITE_EXTERNAL_STORAGE
+     */
+    public static String[] getStoragePermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            return PERMISSION_STORAGE_ANDROID13;
+        } else {
+            return PERMISSION_STORAGE_LEGACY;
+        }
+    }
+
+    /**
+     * 根据 Android 版本获取相机+存储权限数组
+     * Android 13+ 使用 READ_MEDIA_IMAGES/VIDEO
+     * Android 12 及以下使用 READ/WRITE_EXTERNAL_STORAGE
+     */
+    public static String[] getCameraAndStoragePermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            return PERMISSION_CAMERA_ANDROID13;
+        } else {
+            return PERMISSION_CAMERA_LEGACY;
+        }
+    }
 
 
     /**

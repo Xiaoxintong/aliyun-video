@@ -23,7 +23,7 @@ public class SdcardUtils {
      */
     public static void checkAvailableSize(Context context, int tagSize) {
 
-        boolean isHasPermission = PermissionUtils.checkPermissionsGroup(context, PermissionUtils.PERMISSION_STORAGE);
+        boolean isHasPermission = PermissionUtils.checkPermissionsGroup(context, PermissionUtils.getStoragePermissions());
         if (isHasPermission) {
             long availableSize = FileUtils.getSdcardAvailableSize() / 1024 / 1024;
             Log.e(TAG, "log_common_SdcardUtils_availableSize : " + availableSize);

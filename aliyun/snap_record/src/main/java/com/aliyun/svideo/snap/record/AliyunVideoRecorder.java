@@ -941,8 +941,8 @@ public class AliyunVideoRecorder extends Activity implements View.OnClickListene
                 return;
             }
 
-            if (!PermissionUtils.checkPermissionsGroup(this, PermissionUtils.PERMISSION_STORAGE)) {
-                PermissionUtils.requestPermissions(this, PermissionUtils.PERMISSION_STORAGE, PERMISSION_REQUEST_CODE);
+            if (!PermissionUtils.checkPermissionsGroup(this, PermissionUtils.getStoragePermissions())) {
+                PermissionUtils.requestPermissions(this, PermissionUtils.getStoragePermissions(), PERMISSION_REQUEST_CODE);
                 return;
             }
 

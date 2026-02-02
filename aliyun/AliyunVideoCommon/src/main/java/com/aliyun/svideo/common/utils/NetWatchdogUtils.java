@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.net.NetworkInfo;
 
 /**
@@ -124,7 +125,11 @@ public class NetWatchdogUtils {
      */
     public void startWatch() {
         try {
-            mContext.registerReceiver(mReceiver, mNetIntentFilter);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                mContext.registerReceiver(mReceiver, mNetIntentFilter, Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                mContext.registerReceiver(mReceiver, mNetIntentFilter);
+            }
         } catch (Exception ignored) {
         }
     }

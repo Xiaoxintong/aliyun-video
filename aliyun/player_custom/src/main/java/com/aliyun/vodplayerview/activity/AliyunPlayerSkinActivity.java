@@ -126,12 +126,6 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
      */
     private boolean inRequest;
 
-    private static String[] PERMISSIONS_STORAGE = {
-            "android.permission.READ_EXTERNAL_STORAGE",
-            "android.permission.WRITE_EXTERNAL_STORAGE"};
-
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-
     /**
      * 当前点击的视频列表的下标
      */
@@ -857,15 +851,6 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_EXTERNAL_STORAGE) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-            } else {
-                // Permission Denied
-                Toast.makeText(this, getResources().getString(R.string.alivc_sd_card_permission) + "", Toast.LENGTH_SHORT).show();
-            }
-            return;
-        }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
@@ -2080,12 +2065,13 @@ public class AliyunPlayerSkinActivity extends BaseActivity {
         }
 
         @Override
-        public void onSeiData(int type, byte[] bytes) {
+        public void onSeiData(int i, byte[] bytes, byte[] bytes1) {
             AliyunPlayerSkinActivity aliyunPlayerSkinActivity = weakReference.get();
             if (aliyunPlayerSkinActivity != null) {
-                aliyunPlayerSkinActivity.onSeiData(type, bytes);
+                aliyunPlayerSkinActivity.onSeiData(i, bytes);
             }
         }
+
     }
 
     private void onSeiData(int type, byte[] bytes) {

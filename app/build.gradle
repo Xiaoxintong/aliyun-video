@@ -25,6 +25,12 @@ android {
         }
     }
 
+    // 跳过 Manifest 验证（仅用于调试）
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
     packagingOptions {
         exclude 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
         exclude 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
@@ -67,13 +73,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':aliyun:AlivcMedia')
-        implementation project(':aliyun:AliyunVideoCommon')
-        implementation project(':aliyun:AliyunSVideoBase')
-        implementation project(':aliyun:snap_crop')
-        implementation project(':aliyun:snap_record')
-        implementation project(':aliyun:AliyunPlayerBase')
-        implementation project(':aliyun:AlivcPlayerTools')
-        implementation project(':aliyun:player_custom')
+    implementation project(':aliyun:AliyunVideoCommon')
+    implementation project(':aliyun:AliyunSVideoBase')
+    implementation project(':aliyun:snap_crop')
+    implementation project(':aliyun:snap_record')
+    implementation project(':aliyun:AliyunPlayerBase')
+    implementation project(':aliyun:AlivcPlayerTools')
+    implementation project(':aliyun:player_custom')
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
 }

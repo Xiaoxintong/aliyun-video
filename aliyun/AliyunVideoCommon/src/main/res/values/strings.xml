@@ -5,6 +5,9 @@
     <string name="alivc_common_no_read_phone_state_permission">Phone state is not permitted to read, please opend first</string>
     <string name="alivc_common_no_write_external_storage_permission">External storage is not permitted to write, please open first</string>
     <string name="alivc_common_no_read_external_storage_permission">External storage is not permitted to read, please open first</string>
+    <string name="alivc_common_no_read_media_images_permission">Access to images is not permitted, please open first</string>
+    <string name="alivc_common_no_read_media_video_permission">Access to video is not permitted, please open first</string>
+    <string name="alivc_common_no_post_notification_permission">Notification permission is not permitted, please open first</string>
     <string name="alivc_common_note">Note</string>
     <string name="alivc_common_confirm">Confirm</string>
     <string name="alivc_common_no_permission">no permission</string>

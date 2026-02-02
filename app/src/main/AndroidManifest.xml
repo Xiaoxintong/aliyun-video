@@ -8,6 +8,17 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!-- Android 13+ (API 33+) 图片/视频访问权限 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- Android 13+ (API 33+) 通知权限 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Android 14 前台服务权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +30,8 @@
         android:appComponentFactory="xxt"
         tools:replace="android:allowBackup,android:label,android:appComponentFactory,android:icon">
 
-        <activity android:name=".TestMainActivity">
+        <activity android:name=".TestMainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -27,6 +39,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.aliyun.alivc_license.licensekey"
+            android:value="9Pvwf5x2IDX14Bu5C75ad3d20f4804fec9955bb80be6c8fdf" />
+        <meta-data
+            android:name="com.aliyun.alivc_license.licensefile"
+            android:value="assets/cert/license.crt" />
     </application>
 
 </manifest>

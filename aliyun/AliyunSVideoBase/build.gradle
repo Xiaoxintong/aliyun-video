@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='cn.xxt.aliyun'
+apply plugin: 'maven-publish'
 
 
 android {
@@ -16,6 +14,9 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+    publishing {
+        singleVariant('release')
     }
 }
 
@@ -32,3 +33,12 @@ dependencies {
     implementation deps.gson
     api deps.aliyunsvideosnap
 }
+
+// 发布配置
+ext {
+    PUBLISH_GROUP_ID = 'com.github.Xiaoxintong.aliyun-video'
+    PUBLISH_ARTIFACT_ID = 'AliyunSVideoBase'
+    PUBLISH_VERSION = '1.2.0'
+}
+
+apply from: "${rootProject.projectDir}/publish-module.gradle"

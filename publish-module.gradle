@@ -1,0 +1,60 @@
+apply plugin: 'maven-publish'
+
+// 生成源码 JAR
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("sources")
+}
+
+// 生成 Javadoc JAR (可选)
+task javadocJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("javadoc")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // 创建 MavenPublication
+            release(MavenPublication) {
+                // 从 Android components 生成
+                from components.release
+
+                // 添加源码
+                artifact(sourceJar)
+
+                // POM 信息
+                groupId = project.hasProperty("PUBLISH_GROUP_ID") ? project.PUBLISH_GROUP_ID : "com.github.Xiaoxintong"
+                artifactId = project.hasProperty("PUBLISH_ARTIFACT_ID") ? project.PUBLISH_ARTIFACT_ID : project.name
+                version = project.hasProperty("PUBLISH_VERSION") ? project.PUBLISH_VERSION : "1.0.0"
+
+                pom {
+                    name.set(artifactId)
+                    description.set('Aliyun Video SDK - Android components')
+                    url.set('https://github.com/Xiaoxintong/aliyun-video')
+
+                    licenses {
+                        license {
+                            name.set('The Apache License, Version 2.0')
+                            url.set('http://www.apache.org/licenses/LICENSE-2.0.txt')
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.set('Xiaoxintong')
+                            name.set('Xiaoxintong')
+                            email.set('xiaoxintong@example.com')
+                        }
+                    }
+
+                    scm {
+                        connection.set('scm:git:github.com/Xiaoxintong/aliyun-video.git')
+                        developerConnection.set('scm:git:ssh://github.com/Xiaoxintong/aliyun-video.git')
+                        url.set('https://github.com/Xiaoxintong/aliyun-video')
+                    }
+                }
+            }
+        }
+    }
+}

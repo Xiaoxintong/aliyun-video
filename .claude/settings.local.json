@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebSearch",
+      "Bash(wc -l echo \"=== Demo版本2方法统计 ===\" grep -n \"public.*void\\\\|public.*int\\\\|public.*boolean\\\\|public.*String\\\\|public.*float\\\\|public.*long\\\\|public.*View\\\\|public.*Activity\\\\|public.*AliPlayer\\\\|public.*IPlayer\\\\|public.*Theme\" \"/Users/dong/work/project/Demo/AliPlayer-Android-master/Demo/AUIVideoPlayer/AUIVideoTools/src/main/java/com/aliyun/alivcplayertools/widget/AliyunVodPlayerView.java\")",
+      "Bash(wc -l echo \"=== 当前项目版本方法统计 ===\" grep -n \"public.*void\\\\|public.*int\\\\|public.*boolean\\\\|public.*String\\\\|public.*float\\\\|public.*long\\\\|public.*View\\\\|public.*Activity\\\\|public.*AliPlayer\\\\|public.*IPlayer\\\\|public.*Theme\" \"/Users/dong/work/project/XxtProject/aliyun-video/aliyun/AlivcPlayerTools/src/main/java/com/aliyun/player/alivcplayerexpand/widget/AliyunVodPlayerView.java\")"
+    ]
+  }
+}
